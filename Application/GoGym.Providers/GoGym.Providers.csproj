@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A2B44361-D384-476F-AC07-766F168F3202}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GoGym.Providers</RootNamespace>
+    <AssemblyName>GoGym.Providers</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\packages\NPOI.2.0.6\lib\net40\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Logging">
+      <HintPath>..\packages\Ninject.Extensions.Logging.3.2.0.0\lib\net45-full\Ninject.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Logging.Log4Net">
+      <HintPath>..\packages\Ninject.Extensions.Logging.Log4net.3.2.0.0\lib\net45-full\Ninject.Extensions.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\packages\NPOI.2.0.6\lib\net40\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\packages\NPOI.2.0.6\lib\net40\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\packages\NPOI.2.0.6\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\packages\NPOI.2.0.6\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.OpenAccess, Version=2015.1.225.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342">
+      <HintPath>C:\Program Files (x86)\Telerik\Data Access\bin\Telerik.OpenAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess.35.Extensions, Version=2015.1.225.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342">
+      <HintPath>C:\Program Files (x86)\Telerik\Data Access\bin\Telerik.OpenAccess.35.Extensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlertProvider.cs" />
+    <Compile Include="ApplicationSettingKeys.cs" />
+    <Compile Include="AreaProvider.cs" />
+    <Compile Include="AutoNumberProvider.cs" />
+    <Compile Include="BankProvider.cs" />
+    <Compile Include="Base\BaseProvider.cs" />
+    <Compile Include="BillingProvider.cs" />
+    <Compile Include="BillingTypeProvider.cs" />
+    <Compile Include="BranchProvider.cs" />
+    <Compile Include="ClassProvider.cs" />
+    <Compile Include="CommonHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConfigurationKeys.cs" />
+    <Compile Include="ConfigurationSingletonProvider.cs" />
+    <Compile Include="Configuration\CheckInConfiguration.cs" />
+    <Compile Include="Constants\BillingTypeConstants.cs" />
+    <Compile Include="Constants\InvoiceConstants.cs" />
+    <Compile Include="ContractProvider.cs" />
+    <Compile Include="ContractQuestionProvider.cs" />
+    <Compile Include="CreditCardTypeProvider.cs" />
+    <Compile Include="CustomerGradeProvider.cs" />
+    <Compile Include="CustomerNotesProvider.cs" />
+    <Compile Include="CustomerProvider.cs" />
+    <Compile Include="CustomerStatusProvider.cs" />
+    <Compile Include="DocumentProvider.cs" />
+    <Compile Include="DocumentTypeProvider.cs" />
+    <Compile Include="EmployeeProvider.cs" />
+    <Compile Include="Extension.cs" />
+    <Compile Include="InstructorProvider.cs" />
+    <Compile Include="InvoiceProvider.cs" />
+    <Compile Include="ItemAccountProvider.cs" />
+    <Compile Include="InventoryMutationProvider.cs" />
+    <Compile Include="ItemProvider.cs" />
+    <Compile Include="ItemTypeProvider.cs" />
+    <Compile Include="OccupationProvider.cs" />
+    <Compile Include="PackageProvider.cs" />
+    <Compile Include="PaymentProvider.cs" />
+    <Compile Include="PaymentTypeProvider.cs" />
+    <Compile Include="PersonProvider.cs" />
+    <Compile Include="ProspectProvider.cs" />
+    <Compile Include="PurchaseOrderProvider.cs" />
+    <Compile Include="ReceivingProvider.cs" />
+    <Compile Include="SalesTargetProvider.cs" />
+    <Compile Include="SecurityProvider.cs" />
+    <Compile Include="SupplierProvider.cs" />
+    <Compile Include="TemplateTextProvider.cs" />
+    <Compile Include="Constants\TrainingSessionConstants.cs" />
+    <Compile Include="UserProvider.cs" />
+    <Compile Include="ViewModels\BillingResponseViewModel.cs" />
+    <Compile Include="ViewModels\BillingViewModel.cs" />
+    <Compile Include="ViewModels\BranchRoomCapacityViewModel.cs" />
+    <Compile Include="ViewModels\CustomerCheckInViewModel.cs" />
+    <Compile Include="ViewModels\ExcelClassScheduleViewModel.cs" />
+    <Compile Include="ViewModels\InstructorCheckInViewModel.cs" />
+    <Compile Include="ViewModels\InventoryMutationDetailViewModel.cs" />
+    <Compile Include="ViewModels\InvoiceDetailViewModel.cs" />
+    <Compile Include="ViewModels\InvoiceHeaderViewModel.cs" />
+    <Compile Include="ViewModels\MonthlyClosingViewModel.cs" />
+    <Compile Include="ViewModels\PackageDetailViewModel.cs" />
+    <Compile Include="ViewModels\PaymentDetailViewModel.cs" />
+    <Compile Include="ViewModels\ProcessBillingViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\PurchaseOrderDetailViewModel.cs" />
+    <Compile Include="ViewModels\PurchaseOrderHeaderViewModel.cs" />
+    <Compile Include="ViewModels\ReceivingDetailViewModel.cs" />
+    <Compile Include="ViewModels\ReceivingHeaderViewModel.cs" />
+    <Compile Include="ViewModels\TrainingSessionInfoViewModel.cs" />
+    <Compile Include="WarehouseProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GoGym.Data\GoGym.Data.csproj">
+      <Project>{ecb9b1fe-7ab8-403c-bed1-19e78a416030}</Project>
+      <Name>GoGym.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GoGym.Utilities\GoGym.Utilities.csproj">
+      <Project>{2dcc1b92-8a29-4c27-8bf1-07fe316b528a}</Project>
+      <Name>GoGym.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

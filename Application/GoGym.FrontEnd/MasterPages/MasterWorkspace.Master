@@ -1,0 +1,109 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterWorkspace.master.cs" Inherits="GoGym.FrontEnd.MasterPages.MasterWorkspace" %>
+
+<%@ Import Namespace="GoGym.Providers" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><%= ConfigurationManager.AppSettings[ApplicationSettingKeys.ApplicationTitle] %></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <meta http-equiv="Author" content="Paulus Iman" />
+    <meta http-equiv="Description" content="GoGym - Club Management System" />
+    <link rel="stylesheet" href="~/Content/themes/base/jquery.ui.all.css" />
+    <link rel="stylesheet" href="~/Styles/Default.css" type="text/css" />
+</head>
+<body class="igt">
+    <div class="wrapper">
+        <form method="post" id="theForm" name="theForm" runat="server">
+            <telerik:RadScriptManager ID="RadScriptManager1" runat="server">
+                <Scripts>
+                    <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.Core.js" />
+                    <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQuery.js" />
+                    <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQueryInclude.js" />
+                    <asp:ScriptReference Path="~/Scripts/jquery-ui-1.10.4.min.js" />
+                    <asp:ScriptReference Path="~/Scripts/moment.js" />
+                    <asp:ScriptReference Path="~/Scripts/Utils.js" />
+                    <asp:ScriptReference Path="~/Scripts/startup.js" />
+                </Scripts>
+            </telerik:RadScriptManager>
+            <%--<telerik:RadFormDecorator ID="RadFormDecorator1" runat="server" DecoratedControls="Default, Textbox, Textarea, Label" 
+          DecorationZoneID="container" Skin="Simple"></telerik:RadFormDecorator>--%>
+            <div id="container">
+                <div id="header">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td>
+                                <div id="apptitle">
+                                    <a href='<%= ResolveUrl("~/Default.aspx") %>'>
+                                        <img src='<%= ResolveUrl("~/Images/logo_small.png") %>' style="float: left; margin-right: 10px;" />
+                                        <span id="maintitle">
+                                            <%= ConfigurationManager.AppSettings[ApplicationSettingKeys.ApplicationTitle] %>
+                                        </span></a>
+                                    <br />
+                                    Version
+                                <%= ConfigurationManager.AppSettings[ApplicationSettingKeys.VersionNumber] %>
+                                </div>
+
+                            </td>
+                            <td style="text-align: right;"><strong>
+                                <gogym:CurrentCredential ID="CurrentCredential1" runat="server" />
+                            </strong>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                
+                            <asp:LoginStatus ID="LoginStatus1" runat="server" ToolTip="Ends current session and back to login page"
+                                onclick="return confirm('Are you sure want to exit ?')" CssClass="logoutlink"
+                                LogoutAction="RedirectToLoginPage" OnLoggingOut="lgsLoginStatus_LoggingOut" />
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="mainSubHeader">
+                    <table border="0" width="100%">
+                        <tr>
+                            <td>
+                                <gogym:ApplicationMenu ID="VIPDCApplicationMenu" runat="server" />
+                            </td>
+                            <td style="text-align: right;">
+                                <span title="Current date">
+                                    <%= DateTime.Now.ToString("dddd, dd MMMM yyyy") %></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span id="clock" title="Current time"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <gogym:ChangeHomeBranch ID="ChangeHomeBranch1" runat="server" />
+                            </td>
+                            <%--<td style="text-align: right;" title="Current user">Current User: <strong>
+                                <gogym:CurrentCredential ID="CurrentCredential1" runat="server" />
+                            </strong>
+                            </td>
+                            <td style="text-align: right; width: 400px;">
+                                <span title="Current date">
+                                    <%= DateTime.Now.ToString("dddd, dd MMMM yyyy") %></span> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <span id="clock" title="Current time"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:LoginStatus ID="lgsLoginStatus" runat="server" ToolTip="Ends current session and back to login page"
+                                onclick="return confirm('Are you sure want to exit ?')"
+                                LogoutAction="RedirectToLoginPage" OnLoggingOut="lgsLoginStatus_LoggingOut" />
+                            </td>--%>
+                        </tr>
+                    </table>
+                </div>
+                <br />
+                <div id="mainContent">
+                    <div class="titleMed">
+                        <asp:ContentPlaceHolder ID="cphMainTitle" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <br />
+                    <br />
+                    <asp:ContentPlaceHolder ID="cphMainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </form>
+    </div>
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>

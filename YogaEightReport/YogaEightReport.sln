@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "YogaEightReport", "YogaEightReport.rptproj", "{FE96F41D-7772-431F-943F-354159AD55E7}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://benecello.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = YogaEightReport.rptproj
+		SccLocalPath1 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE96F41D-7772-431F-943F-354159AD55E7}.Debug|Default.ActiveCfg = Debug
+		{FE96F41D-7772-431F-943F-354159AD55E7}.Debug|Default.Build.0 = DebugLocal
+		{FE96F41D-7772-431F-943F-354159AD55E7}.Debug|Default.Deploy.0 = DebugLocal
+		{FE96F41D-7772-431F-943F-354159AD55E7}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{FE96F41D-7772-431F-943F-354159AD55E7}.DebugLocal|Default.Build.0 = DebugLocal
+		{FE96F41D-7772-431F-943F-354159AD55E7}.DebugLocal|Default.Deploy.0 = DebugLocal
+		{FE96F41D-7772-431F-943F-354159AD55E7}.Release|Default.ActiveCfg = Release
+		{FE96F41D-7772-431F-943F-354159AD55E7}.Release|Default.Build.0 = Release
+		{FE96F41D-7772-431F-943F-354159AD55E7}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="GoGym.FrontEnd.Services.CheckInService" CodeBehind="CheckInService.svc.cs"  Factory="Ninject.Extensions.Wcf.NinjectServiceHostFactory" %>

@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="GoGym.FrontEnd.Services.AjaxCallService" CodeBehind="AjaxCallService.svc.cs" Factory="Ninject.Extensions.Wcf.NinjectServiceHostFactory" %>

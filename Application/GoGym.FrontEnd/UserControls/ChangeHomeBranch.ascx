@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ChangeHomeBranch.ascx.cs" Inherits="GoGym.FrontEnd.UserControls.ChangeHomeBranch" %>
+<telerik:RadDropDownList runat="server" ID="ddlChangeHomeBranch" AutoPostBack="True" OnSelectedIndexChanged="ddlChangeHomeBranch_SelectedIndexChanged" EnableViewState="False"></telerik:RadDropDownList>
